@@ -40,7 +40,6 @@ body {
 
 .option {
     position: relative;
-    /* background-color: rgb(170, 204, 228); */
     border: solid rgb(164, 164, 201) 4px;
     border-radius: 20px;
     width: 300px;
@@ -49,13 +48,53 @@ body {
     animation: bobble 5s infinite;
 }
 
-@keyframes bobble {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(30px); }
-    100% { transform: translateY(0); }
+
+
+.option:hover {
+    animation: bobble-hover 5s infinite;
+}
+
+/* @keyframes bobble {
+    0%   {-webkit-transform: translateY(0); }
+    50%  {-webkit-transform: translateY(30px); }
+    100% {-webkit-transform: translateY(0); }
+} */
+
+@keyframes bobble-hover {
+    0%   {-webkit-transform: translateY(0) scale(1.0); }
+    50%  {-webkit-transform: translateY(30px) scale(1.1); }
+    100% {-webkit-transform: translateY(0) scale(1.0); }
 }
 
 .bobble {
     animation-name: bobble;
     animation-timing-function: ease;
+}
+
+.bobble-hover:hover {
+    animation-name: bobble-hover;
+    animation-timing-function: ease;
+}
+
+.title {
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 65%;
+    width: 1000px;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+    text-align: center;
+}
+
+.title p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: linear-gradient(to right, #fff 50%, #000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
