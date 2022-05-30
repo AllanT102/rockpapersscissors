@@ -8,19 +8,11 @@
 body {
     margin: 0; 
     padding: 0;
-    /* height: 100vh;
-    width: 100vw; */
 }
-
-/* body {
-    height: 100%;
-    background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
-} */
 
 .content {
     display: flex;
     position: relative;
-    border: solid blue 2px;
     z-index: 1;
 }
 
@@ -40,10 +32,30 @@ body {
     display: flex;
     z-index: 2;
     position: absolute;
-    border: solid green 2px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    gap: 50px;
 }
 
 .option {
-    background-color: white;
-    border: solid red 2px;
+    position: relative;
+    /* background-color: rgb(170, 204, 228); */
+    border: solid rgb(164, 164, 201) 4px;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    animation: bobble 5s infinite;
+}
+
+@keyframes bobble {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+}
+
+.bobble {
+    animation-name: bobble;
+    animation-timing-function: ease;
 }
