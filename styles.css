@@ -39,6 +39,7 @@ body {
 }
 
 .option {
+    cursor: pointer;
     position: relative;
     border: solid rgb(164, 164, 201) 4px;
     border-radius: 20px;
@@ -106,10 +107,8 @@ body {
     padding-left: 30px;
     padding-right: 100px;
     z-index: 3;
-    border: solid red 2px;
     top: 80%;
     font-size: 50px;
-    display: none;
 }
 
 .play-button {
